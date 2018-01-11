@@ -1,0 +1,19 @@
+{
+	"name": "dasioclient",
+	"authors": [
+		"Daniel G"
+	],
+	"description": "D bindings for CASIOClient (A C API for Steinberg ASIO)",
+	"copyright": "Copyright © 2018, Daniel G",
+	"license": "MIT",
+
+	"targetType": "library",
+
+	"targetPath": "bin",
+
+	"sourceFiles-windows-x86-dmd": ["./lib/32/dmd/CASIOCLIENT.lib"],
+	"sourceFiles-windows-x86_64": ["./lib/64/CASIOCLIENT.lib"],
+
+	"copyFiles-windows-x86": ["./lib/32/*.dll"],
+	"copyFiles-windows-x86_64": ["./lib/64/*.dll"]
+}

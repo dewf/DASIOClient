@@ -1,0 +1,15 @@
+{
+	"name": "simpledemo",
+	"authors": [
+		"Daniel G"
+	],
+	"description": "demo",
+	"copyright": "Copyright © 2018, Daniel G",
+	"license": "MIT",
+
+	"targetPath": "bin",
+
+	"dependencies": {
+		"dasioclient": {"path": "../../"}
+	}
+}
