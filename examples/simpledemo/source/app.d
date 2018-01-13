@@ -9,7 +9,7 @@ private class Switcher : AsioDelegate {
 	private AsioDevice dev;
 	private float samplePeriod;
 	private float curSample;
-    override void deviceOpened(AsioDevice d) {
+	override void deviceOpened(AsioDevice d) {
 		this.dev = d;
 		samplePeriod = d.currentSampleRate / 220.0;
 		curSample = 0.0;
