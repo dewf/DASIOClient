@@ -36,10 +36,11 @@ void main()
 	auto dev = new AsioDevice(all_devices[0].id, new Switcher());
 
 	if (dev.open()) {
-		dev.start();
-		writeln("sleeping 5 seconds...");
-		Thread.sleep(5.seconds);
-		dev.stop();
+		if (dev.start()) {
+			writeln("sleeping 5 seconds...");
+			Thread.sleep(5.seconds);
+			dev.stop();
+		}
 		dev.close();
 	}
 }
