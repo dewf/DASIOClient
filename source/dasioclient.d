@@ -1,7 +1,7 @@
 import std.stdio;
 import std.string;
 import std.conv;
-import CASIOClient;
+import c_api.CASIOClient;
 
 import core.stdc.string; // for memset
 

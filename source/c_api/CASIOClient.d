@@ -1,3 +1,5 @@
+module c_api.CASIOClient;
+
 // The following ifdef block is the standard way of creating macros which make exporting 
 
 extern (C):
@@ -42,29 +44,29 @@ struct CASIO_Event
 
     union
     {
-        struct _Anonymous_0
+        struct LogEvent
         {
             const(char)* message;
         }
-
-        _Anonymous_0 logEvent;
+        LogEvent logEvent;
 
         // use CASIO_DeviceProperties to interpret these (count + sample type)
 
-        struct _Anonymous_1
+        // CASIO_TimeFlags
+        struct BufferSwitchEvent
         {
             void** inputs;
             void** outputs;
+
             CASIO_TimeStruct time;
         }
-        _Anonymous_1 bufferSwitchEvent;
+        BufferSwitchEvent bufferSwitchEvent;
 
-        struct _Anonymous_3
+        struct SampleRateChangedEvent
         {
             double newSampleRate;
         }
-
-        _Anonymous_3 sampleRateChangedEvent;
+        SampleRateChangedEvent sampleRateChangedEvent;
     }
 }
 
