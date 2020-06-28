@@ -168,12 +168,12 @@ private extern (C) int asioCallback(CASIO_Event* event, CASIO_Device device, voi
     return 0;
 }
 
-static this()
+shared static this()
 {
     CASIO_Init(&asioCallback);
 }
 
-static ~this()
+shared static ~this()
 {
     CASIO_Shutdown();
 }
